@@ -1,9 +1,31 @@
 import './style.css';
 import countries from './countries.json';
+import timezones from './timezones.json';
 
 const form = document.querySelector('form');
 const select = document.querySelector('select');
 const input = document.querySelector('[name="phone-number"');
+
+function setCountryCodeByTimezone() {
+  try {
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+    if (timezone === '' || !timezone) return;
+
+    if (timezones[timezone] === undefined) return;
+
+    const countryCode = timezones[timezone].c[0];
+
+    for (let option of select.options) {
+      if (option.getAttribute('data-country-code') === countryCode) {
+        option.selected = true;
+        break;
+      }
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 countries
   .sort((a, b) => a.code > b.code)
@@ -28,3 +50,5 @@ form.addEventListener('submit', (e) => {
 
   window.location.assign(`https://wa.me/${countryCode + phoneNumber}`);
 });
+
+setCountryCodeByTimezone();
