@@ -46,88 +46,101 @@
           </svg>
         </div>
       </div>
-      <div class="relative px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
-          <div>
-            <div>
-              <h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-                Send
-                <span
-                  class="bg-gradient-to-r from-emerald-500 to-green-900 text-transparent bg-clip-text"
-                  >Messages</span
-                >
-                Without the Hassle
-              </h1>
-              <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                Are you tired of manually adding contacts to your phone before sending a WhatsApp
-                message? Just add the phone number below, and a WhatsApp conversation will be
-                started with the person without having to save contact information.
-              </p>
-              <form class="flex flex-col sm:flex-row gap-4 mt-2">
-                <div class="flex-1">
-                  <div class="relative rounded-md shadow-sm h-full">
-                    <div class="absolute inset-y-0 left-0 flex items-center">
-                      <label for="country" class="sr-only">Country</label>
-                      <select
-                        id="country"
-                        name="country"
-                        autocomplete="tel-country-code"
-                        class="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 text-gray-500 focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm"
-                      >
-                        <option value="">No Code</option>
-                      </select>
-                    </div>
-                    <input
-                      type="tel"
-                      name="phone-number"
-                      id="phone-number"
-                      class="block h-full w-full rounded-md border-gray-300 pl-40 sm:pl-36 focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm"
-                      placeholder="(555) 123-4567"
-                      autocomplete="tel-national"
-                    />
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  class="inline-flex justify-center items-center rounded-md border border-transparent bg-emerald-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
-                >
-                  Send a message 🚀
-                </button>
-              </form>
-              <p class="mt-2 text-sm text-gray-500" id="email-description">
-                You can choose a country code from the list. If you don't find yours, you can leave
-                it blank.
-              </p>
-            </div>
-            <div
-              class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+      <div class="relative flex items-center h-full px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl items-center">
+          <h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+            Send
+            <span
+              class="bg-gradient-to-r from-emerald-500 to-green-900 text-transparent bg-clip-text"
+              >Messages</span
             >
-              <svg
-                class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
-                viewBox="0 0 1155 678"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)"
-                  fill-opacity=".3"
-                  d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-                />
-                <defs>
-                  <linearGradient
-                    id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
-                    x1="1155.49"
-                    x2="-78.208"
-                    y1=".177"
-                    y2="474.645"
-                    gradientUnits="userSpaceOnUse"
+            Without the Hassle
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
+            Are you tired of manually adding contacts to your phone before sending a WhatsApp
+            message? Just add the phone number below, and a WhatsApp conversation will be started
+            with the person without having to save contact information.
+          </p>
+
+          <form class="flex flex-col sm:flex-row gap-4 mt-2">
+            <div class="flex-1">
+              <div class="relative rounded-md shadow-sm h-full">
+                <div class="absolute inset-y-0 left-0 flex items-center">
+                  <label for="country" class="sr-only">Country</label>
+                  <select
+                    id="country"
+                    name="country"
+                    autocomplete="tel-country-code"
+                    class="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 text-gray-500 focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm"
                   >
-                    <stop stop-color="#45c656"></stop>
-                    <stop offset="1" stop-color="#128c7e"></stop>
-                  </linearGradient>
-                </defs>
-              </svg>
+                    <option value="">No Code</option>
+                  </select>
+                </div>
+                <input
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  class="block h-full w-full rounded-md border-gray-300 pl-40 sm:pl-36 focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm"
+                  placeholder="(555) 123-4567"
+                  autocomplete="tel-national"
+                />
+              </div>
             </div>
+            <button
+              type="submit"
+              class="inline-flex justify-center items-center rounded-md border border-transparent bg-emerald-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+            >
+              Send a message 🚀
+            </button>
+          </form>
+          <p class="mt-2 text-sm text-gray-500" id="email-description">
+            You can choose a country code from the list. If you don't find yours, you can leave it
+            blank.
+          </p>
+          <p class="mt-10 text-xs text-center text-gray-500">
+            We collect data about your browser, IP, location and usage for analytics purposes
+            through
+            <a
+              href="https://marketingplatform.google.com/about/analytics/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-500 hover:text-gray-600 underline"
+            >
+              Google Analytics
+            </a>
+            . No further information is recorded; no cookies or trackers are used.. No personal
+            information is recorded or stored by this site. We utilize official WhatsApp APIs; phone
+            numbers are sent directly to the WhatsApp servers. This service is not associated with
+            Meta, Facebook or WhatsApp in any way.
+          </p>
+          <div
+            class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          >
+            <svg
+              class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+              viewBox="0 0 1155 678"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)"
+                fill-opacity=".3"
+                d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+              />
+              <defs>
+                <linearGradient
+                  id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
+                  x1="1155.49"
+                  x2="-78.208"
+                  y1=".177"
+                  y2="474.645"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#45c656"></stop>
+                  <stop offset="1" stop-color="#128c7e"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
         </div>
       </div>

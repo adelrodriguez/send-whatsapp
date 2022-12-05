@@ -46,19 +46,10 @@ input.addEventListener('focus', () => {
   gtag('event', 'input_focus');
 });
 
-select.addEventListener('change', (e) => {
-  gtag('event', 'input_change', {
-    country_code: e.target.value,
-  });
-});
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  gtag('event', 'form_submit', {
-    country_code: select.value,
-    phone_number: input.value,
-  });
+  gtag('event', 'form_submit');
 
   // Replaces ( ) - and spaces with empty string
   const phoneNumber = `${input.value}`.replace(/\(|\)|\-| /g, '');
