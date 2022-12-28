@@ -5,6 +5,8 @@ import timezones from './timezones.json';
 const form = document.querySelector('form');
 const select = document.querySelector('select');
 const input = document.querySelector('[name="phone-number"');
+const twitterShare = document.querySelector('#twitter-share');
+const facebookShare = document.querySelector('#facebook-share');
 
 function setCountryCodeByTimezone() {
   try {
@@ -56,6 +58,14 @@ form.addEventListener('submit', (e) => {
   const countryCode = select.value;
 
   window.location.assign(`https://wa.me/${countryCode + phoneNumber}`);
+});
+
+twitterShare.addEventListener('click', () => {
+  gtag('event', 'twitter_share');
+});
+
+facebookShare.addEventListener('click', () => {
+  gtag('event', 'facebook_share');
 });
 
 setCountryCodeByTimezone();
